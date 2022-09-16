@@ -1,0 +1,6 @@
+@use "../globals/" as g;
+@use "../util/" as u;
+
+.section header {
+  margin-bottom: u.em(60);
+}

@@ -1,0 +1,15 @@
+@use "globals" as g;
+@use "util" as u;
+
+.workflow {
+  img {
+    width: 50px;
+  }
+  ul {
+    flex-wrap: wrap;
+
+    li {
+      flex-basis: 300px;
+    }
+  }
+}

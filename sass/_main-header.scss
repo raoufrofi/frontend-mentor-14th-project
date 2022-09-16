@@ -1,0 +1,43 @@
+@use "globals" as g;
+@use "util" as u;
+@use "layout" as l;
+
+.main__header {
+  color: rgb(43, 43, 43);
+  gap: u.em(50);
+
+  figure {
+    width: 120px;
+    margin-inline: auto;
+  }
+
+  &-btns {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: u.em(16);
+
+    @include u.breakpoint(tab) {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    button {
+      border-radius: 50px;
+      color: #fff;
+      //   font-weight: 600;
+      padding: u.em(16) u.em(40);
+      border: none;
+      font-size: 18px;
+      box-shadow: 0 1px 3px rgb(77, 77, 77);
+    }
+
+    button:nth-child(1) {
+      background-color: g.$strong-cyan;
+    }
+
+    button:nth-child(2) {
+      background-color: g.$light-blue;
+    }
+  }
+}

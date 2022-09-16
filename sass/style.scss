@@ -1,0 +1,36 @@
+@use "globals" as g;
+@use "util" as u;
+@use "layout";
+
+@use "main-header";
+@use "snippets";
+@use "workflow";
+@use "footer";
+@use "brands";
+
+body {
+  font-family: g.$bai-jamjuree;
+  width: 100%;
+  min-height: 100vh;
+  background: {
+    image: url("../images/bg-header-mobile.png");
+    size: contain;
+    repeat: no-repeat;
+  }
+  padding-top: 5em;
+
+  @include u.breakpoint(tab) {
+    background-image: url("../images/bg-header-desktop.png");
+  }
+}
+
+main {
+  width: min(450px, 90%);
+  padding: u.em(10);
+  padding-bottom: u.em(100);
+  gap: u.em(130);
+
+  @include u.breakpoint(tab) {
+    width: min(1280px, 70%);
+  }
+}

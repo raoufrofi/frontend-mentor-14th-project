@@ -1,0 +1,35 @@
+@use "globals" as g;
+@use "util" as u;
+@use "layout" as l;
+
+.snippets {
+  ul {
+    gap: u.em(30);
+    @include u.breakpoint(tab) {
+      text-align: left;
+      align-self: end;
+      padding-top: u.em(40);
+    }
+  }
+  figure {
+    @include u.breakpoint(tab) {
+      position: relative;
+    }
+  }
+
+  img {
+    @include u.breakpoint(tab) {
+      position: absolute;
+      right: 0;
+      width: 600px;
+    }
+  }
+
+  article {
+    @include u.breakpoint(tab) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr;
+      text-align: left;
+    }
+  }
+}

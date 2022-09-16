@@ -1,0 +1,29 @@
+@use "../globals/" as g;
+@use "../util/" as u;
+
+.center {
+  text-align: center;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: u.em(10);
+}
+
+h2,
+h3 {
+  margin-bottom: u.em(7);
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+p {
+  line-height: 1.5;
+  color: g.$dark-grayish-blue;
+}

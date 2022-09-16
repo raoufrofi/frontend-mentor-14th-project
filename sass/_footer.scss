@@ -1,0 +1,42 @@
+@use "globals" as g;
+@use "util" as u;
+
+.footer {
+  background-color: g.$grayish-blue;
+  width: 100%;
+}
+
+footer {
+  width: min(1280px, 80%);
+  margin-inline: auto;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+  figure {
+    margin-inline: auto;
+    width: 60px;
+  }
+
+  ul {
+    display: flex;
+    padding: 2em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include u.breakpoint(tab) {
+      flex-wrap: wrap;
+      justify-content: left;
+      flex-direction: row;
+    }
+  }
+
+  justify-content: space-around;
+  font-size: 18px;
+
+  padding: u.em(40);
+
+  @include u.breakpoint(tab) {
+    grid-template-columns: auto 3fr 1fr;
+    grid-template-rows: 1fr;
+  }
+}

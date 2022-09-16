@@ -1,0 +1,10 @@
+@use "globals" as g;
+@use "util" as u;
+
+.brands {
+  flex-wrap: wrap;
+
+  figure {
+    flex-basis: 150px;
+  }
+}
